@@ -91,6 +91,7 @@ typedef enum
   MODE_REWRITE,
   MODE_RND_READ,
   MODE_RND_WRITE,
+  MODE_AG4_WRITE,
   MODE_RND_RW,
   MODE_MIXED
 } file_test_mode_t;
@@ -187,7 +188,7 @@ static sb_arg_t fileio_args[] = {
   {"file-num", "number of files to create", SB_ARG_TYPE_INT, "128"},
   {"file-block-size", "block size to use in all IO operations", SB_ARG_TYPE_INT, "16384"},
   {"file-total-size", "total size of files to create", SB_ARG_TYPE_SIZE, "2G"},
-  {"file-test-mode", "test mode {seqwr, seqrewr, seqrd, rndrd, rndwr, rndrw}",
+  {"file-test-mode", "test mode {seqwr, seqrewr, seqrd, rndrd, rndwr, ag4, rndrw}",
    SB_ARG_TYPE_STRING, NULL},
   {"file-io-mode", "file operations mode {sync,async,fastmmap,slowmmap}", SB_ARG_TYPE_STRING, "sync"},
 #ifdef HAVE_LIBAIO
@@ -491,6 +492,8 @@ sb_request_t file_get_rnd_request(void)
   unsigned long long   tmppos;
   int                  real_mode = test_mode;
   int                  mode = test_mode;
+  static unsigned long long ag_pos = 0;
+  static int           ag_group = 0;
   
   sb_req.type = SB_REQ_TYPE_FILE;
   
@@ -513,7 +516,7 @@ sb_request_t file_get_rnd_request(void)
   {
     if (file_fsync_end != 0 &&
         (real_mode == MODE_RND_WRITE || real_mode == MODE_RND_RW ||
-         real_mode == MODE_MIXED))
+         real_mode == MODE_AG4_WRITE || real_mode == MODE_MIXED))
     {
       pthread_mutex_lock(&fsync_mutex);
       if(fsynced_file2 < num_files)
@@ -563,7 +566,18 @@ sb_request_t file_get_rnd_request(void)
   else     
     file_req->operation = FILE_OP_TYPE_READ;
 
-  tmppos = (long long)((double)randnum / (double)SB_MAX_RND * (double)(total_size));
+  if (mode==MODE_AG4_WRITE) {
+      if (++ag_group == 4) {
+        ag_pos += file_block_size;
+        ag_group = 0;
+      }
+    ag_pos %= total_size / 4;
+    tmppos = ag_pos + total_size / 4 * ag_group;
+    file_req->operation = FILE_OP_TYPE_WRITE;
+  }
+  else {
+    tmppos = (long long)((double)randnum / (double)SB_MAX_RND * (double)(total_size));
+  }
   tmppos = tmppos - (tmppos % (long long)file_block_size);
   file_req->file_id = (int)(tmppos / (long long)file_size);
   file_req->pos = (long long)(tmppos % (long long)file_size);
@@ -727,6 +741,7 @@ void file_print_mode(void)
   switch (test_mode)
   {
     case MODE_RND_WRITE:
+    case MODE_AG4_WRITE:
     case MODE_RND_READ:
     case MODE_RND_RW:
       log_text(LOG_INFO, "Number of random requests for random IO: %d",
@@ -824,6 +839,8 @@ const char *get_test_mode_str(file_test_mode_t mode)
       return "random read"; 
     case MODE_RND_WRITE:
       return "random write";
+    case MODE_AG4_WRITE:
+      return "ag=4 write";
     case MODE_RND_RW:
       return "random r/w";
     case MODE_MIXED:
@@ -1562,6 +1579,8 @@ int parse_arguments(void)
       test_mode = MODE_RND_READ;
     else if (!strcmp(mode, "rndwr"))
       test_mode = MODE_RND_WRITE;
+    else if (!strcmp(mode, "ag4"))
+      test_mode = MODE_AG4_WRITE;
     else if (!strcmp(mode, "rndrw"))
       test_mode = MODE_RND_RW;
     else
