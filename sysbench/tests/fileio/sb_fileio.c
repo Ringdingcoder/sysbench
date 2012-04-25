@@ -568,10 +568,10 @@ sb_request_t file_get_rnd_request(void)
 
   if (mode==MODE_AG4_WRITE) {
       if (++ag_group == 4) {
-        ag_pos += file_block_size;
+        ag_pos += file_block_size*2;
+        ag_pos %= total_size / 4;
         ag_group = 0;
       }
-    ag_pos %= total_size / 4;
     tmppos = ag_pos + total_size / 4 * ag_group;
     file_req->operation = FILE_OP_TYPE_WRITE;
   }
