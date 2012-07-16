@@ -52,7 +52,8 @@ Read 0b  Written 167.54Mb  Total transferred 167.54Mb  (5.5773Mb/sec)
 
 Slow, but at least it's consistent.
 
-And that's what I would expect, and which a decent RAID controller manages to provide (LSI Logic / Symbios Logic MegaRAID SAS 1078):
+And that's what I would expect, and which a decent RAID controller manages to
+provide (LSI Logic / Symbios Logic MegaRAID SAS 1078):
 
 [   2s] reads: 0.00 MB/s writes: 56.65 MB/s fsyncs: 0.00/s response time: 0.117ms (95%)
 [   4s] reads: 0.00 MB/s writes: 37.15 MB/s fsyncs: 0.00/s response time: 0.221ms (95%)
