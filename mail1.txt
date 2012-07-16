@@ -1,6 +1,12 @@
-In the meantime, the very useful --report-interval switch has been added to development versions of sysbench, and I've had access to one additional system.
+In the meantime, the very useful --report-interval switch has been added to
+development versions of sysbench, and I've had access to one additional system.
 
-If I thought that the internal RAID was bad, that's only because I have not yet experienced an external enclosure from HP attached via FibreChannel (P2000 G3 MSA, QLogic Corp. ISP2532-based 8Gb Fibre Channel to PCI Express HBA). Unfortunately, I don't have detailed information about the configuration of this enclosure, except that it's a RAID6 volume, with 10 or 12 disks, I believe.
+If I thought that the internal RAID was bad, that's only because I have not yet
+experienced an external enclosure from HP attached via FibreChannel (P2000 G3
+MSA, QLogic Corp. ISP2532-based 8Gb Fibre Channel to PCI Express HBA).
+Unfortunately, I don't have detailed information about the configuration of
+this enclosure, except that it's a RAID6 volume, with 10 or 12 disks, I
+believe.
 
 Witness this horrendous tanking of write throughput:
 
@@ -66,6 +72,12 @@ Operations performed:  0 reads, 284087 writes, 0 Other = 284087 Total
 Read 0b  Written 1.0837Gb  Total transferred 1.0837Gb  (36.99Mb/sec)
  9469.55 Requests/sec executed
 
-The command line used was: sysbench --test=fileio --max-time=30 --max-requests=10000000 --file-num=1 --file-extra-flags=direct --file-total-size=8G --file-block-size=4k --file-fsync-all=off --file-fsync-freq=0 --file-fsync-mode=fdatasync --num-threads=1 --file-test-mode=ag4 --report-interval=2 run
+The command line used was: sysbench --test=fileio --max-time=30
+--max-requests=10000000 --file-num=1 --file-extra-flags=direct
+--file-total-size=8G --file-block-size=4k --file-fsync-all=off
+--file-fsync-freq=0 --file-fsync-mode=fdatasync --num-threads=1
+--file-test-mode=ag4 --report-interval=2 run
 
-I have not yet uploaded my patched version of the development sysbench, but I'm planning to do so, and I'd be really interested if someone could run it on a really high-end storage system.
+I have not yet uploaded my patched version of the development sysbench, but I'm
+planning to do so, and I'd be really interested if someone could run it on a
+really high-end storage system.
