@@ -1,0 +1,120 @@
+Fibre Channel:
+==============
+
+4 threads
+
+[   2s] reads: 0.00 MB/s writes: 23.55 MB/s fsyncs: 0.00/s response time: 1.171ms (95%)
+[   4s] reads: 0.00 MB/s writes: 24.35 MB/s fsyncs: 0.00/s response time: 1.129ms (95%)
+[   6s] reads: 0.00 MB/s writes: 24.55 MB/s fsyncs: 0.00/s response time: 1.141ms (95%)
+[   8s] reads: 0.00 MB/s writes: 25.73 MB/s fsyncs: 0.00/s response time: 1.088ms (95%)
+[  10s] reads: 0.00 MB/s writes: 6.14 MB/s fsyncs: 0.00/s response time: 0.994ms (95%)
+[  12s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 2735.611ms (95%)
+[  14s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 3800.107ms (95%)
+[  16s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 4404.397ms (95%)
+[  18s] reads: 0.00 MB/s writes: 0.00 MB/s fsyncs: 0.00/s response time: 3153.588ms (95%)
+[  20s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 4769.433ms (95%)
+
+
+8 threads
+
+[   2s] reads: 0.00 MB/s writes: 26.99 MB/s fsyncs: 0.00/s response time: 2.451ms (95%)
+[   4s] reads: 0.00 MB/s writes: 28.12 MB/s fsyncs: 0.00/s response time: 3.153ms (95%)
+[   6s] reads: 0.00 MB/s writes: 25.97 MB/s fsyncs: 0.00/s response time: 2.965ms (95%)
+[   8s] reads: 0.00 MB/s writes: 23.23 MB/s fsyncs: 0.00/s response time: 2.560ms (95%)
+[  10s] reads: 0.00 MB/s writes: 0.00 MB/s fsyncs: 0.00/s response time: 791.041ms (95%)
+[  12s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 3458.162ms (95%)
+[  14s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 5519.598ms (95%)
+[  16s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 3219.401ms (95%)
+[  18s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 10235.289ms (95%)
+[  20s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 3765.007ms (95%)
+
+16 threads
+
+[   2s] reads: 0.00 MB/s writes: 34.27 MB/s fsyncs: 0.00/s response time: 3.899ms (95%)
+[   4s] reads: 0.00 MB/s writes: 28.62 MB/s fsyncs: 0.00/s response time: 6.910ms (95%)
+[   6s] reads: 0.00 MB/s writes: 27.94 MB/s fsyncs: 0.00/s response time: 6.869ms (95%)
+[   8s] reads: 0.00 MB/s writes: 13.50 MB/s fsyncs: 0.00/s response time: 7.594ms (95%)
+[  10s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 2308.573ms (95%)
+[  12s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 4811.016ms (95%)
+[  14s] reads: 0.00 MB/s writes: 0.00 MB/s fsyncs: 0.00/s response time: 4635.714ms (95%)
+[  16s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 3200.185ms (95%)
+[  18s] reads: 0.00 MB/s writes: 0.03 MB/s fsyncs: 0.00/s response time: 9623.207ms (95%)
+[  20s] reads: 0.00 MB/s writes: 0.01 MB/s fsyncs: 0.00/s response time: 8053.211ms (95%)
+
+LSI:
+====
+
+4 threads
+
+[   2s] reads: 0.00 MB/s writes: 63.08 MB/s fsyncs: 0.00/s response time: 0.452ms (95%)
+[   4s] reads: 0.00 MB/s writes: 34.26 MB/s fsyncs: 0.00/s response time: 1.660ms (95%)
+[   6s] reads: 0.00 MB/s writes: 33.92 MB/s fsyncs: 0.00/s response time: 1.478ms (95%)
+[   8s] reads: 0.00 MB/s writes: 36.34 MB/s fsyncs: 0.00/s response time: 1.589ms (95%)
+[  10s] reads: 0.00 MB/s writes: 34.99 MB/s fsyncs: 0.00/s response time: 1.621ms (95%)
+[  12s] reads: 0.00 MB/s writes: 36.41 MB/s fsyncs: 0.00/s response time: 1.639ms (95%)
+
+8 threads
+
+[   2s] reads: 0.00 MB/s writes: 45.34 MB/s fsyncs: 0.00/s response time: 2.749ms (95%)
+[   4s] reads: 0.00 MB/s writes: 32.15 MB/s fsyncs: 0.00/s response time: 4.579ms (95%)
+[   6s] reads: 0.00 MB/s writes: 33.64 MB/s fsyncs: 0.00/s response time: 4.644ms (95%)
+[   8s] reads: 0.00 MB/s writes: 35.20 MB/s fsyncs: 0.00/s response time: 4.131ms (95%)
+[  10s] reads: 0.00 MB/s writes: 33.88 MB/s fsyncs: 0.00/s response time: 3.876ms (95%)
+[  12s] reads: 0.00 MB/s writes: 33.65 MB/s fsyncs: 0.00/s response time: 4.929ms (95%)
+
+16 threads
+
+[   2s] reads: 0.00 MB/s writes: 36.90 MB/s fsyncs: 0.00/s response time: 3.510ms (95%)
+[   4s] reads: 0.00 MB/s writes: 35.36 MB/s fsyncs: 0.00/s response time: 8.629ms (95%)
+[   6s] reads: 0.00 MB/s writes: 32.27 MB/s fsyncs: 0.00/s response time: 10.091ms (95%)
+[   8s] reads: 0.00 MB/s writes: 34.79 MB/s fsyncs: 0.00/s response time: 9.499ms (95%)
+[  10s] reads: 0.00 MB/s writes: 35.62 MB/s fsyncs: 0.00/s response time: 8.801ms (95%)
+[  12s] reads: 0.00 MB/s writes: 34.64 MB/s fsyncs: 0.00/s response time: 9.488ms (95%)
+
+P400:
+=====
+
+4 threads
+
+[   2s] reads: 0.00 MB/s writes: 33.59 MB/s fsyncs: 0.00/s response time: 0.255ms (95%)
+[   4s] reads: 0.00 MB/s writes: 5.11 MB/s fsyncs: 0.00/s response time: 12.853ms (95%)
+[   6s] reads: 0.00 MB/s writes: 5.45 MB/s fsyncs: 0.00/s response time: 0.677ms (95%)
+[   8s] reads: 0.00 MB/s writes: 5.16 MB/s fsyncs: 0.00/s response time: 0.902ms (95%)
+[  10s] reads: 0.00 MB/s writes: 4.56 MB/s fsyncs: 0.00/s response time: 58.242ms (95%)
+[  12s] reads: 0.00 MB/s writes: 5.30 MB/s fsyncs: 0.00/s response time: 0.669ms (95%)
+[  14s] reads: 0.00 MB/s writes: 5.22 MB/s fsyncs: 0.00/s response time: 0.743ms (95%)
+[  16s] reads: 0.00 MB/s writes: 4.73 MB/s fsyncs: 0.00/s response time: 57.877ms (95%)
+[  18s] reads: 0.00 MB/s writes: 4.39 MB/s fsyncs: 0.00/s response time: 58.417ms (95%)
+[  20s] reads: 0.00 MB/s writes: 4.56 MB/s fsyncs: 0.00/s response time: 57.704ms (95%)
+[  22s] reads: 0.00 MB/s writes: 4.81 MB/s fsyncs: 0.00/s response time: 57.429ms (95%)
+[  24s] reads: 0.00 MB/s writes: 4.53 MB/s fsyncs: 0.00/s response time: 57.895ms (95%)
+
+8 threads
+
+[   2s] reads: 0.00 MB/s writes: 38.61 MB/s fsyncs: 0.00/s response time: 0.969ms (95%)
+[   4s] reads: 0.00 MB/s writes: 4.98 MB/s fsyncs: 0.00/s response time: 59.886ms (95%)
+[   6s] reads: 0.00 MB/s writes: 4.69 MB/s fsyncs: 0.00/s response time: 60.300ms (95%)
+[   8s] reads: 0.00 MB/s writes: 4.57 MB/s fsyncs: 0.00/s response time: 60.246ms (95%)
+[  10s] reads: 0.00 MB/s writes: 4.46 MB/s fsyncs: 0.00/s response time: 60.626ms (95%)
+[  12s] reads: 0.00 MB/s writes: 4.46 MB/s fsyncs: 0.00/s response time: 60.445ms (95%)
+[  14s] reads: 0.00 MB/s writes: 4.61 MB/s fsyncs: 0.00/s response time: 60.662ms (95%)
+[  16s] reads: 0.00 MB/s writes: 4.35 MB/s fsyncs: 0.00/s response time: 60.571ms (95%)
+[  18s] reads: 0.00 MB/s writes: 4.87 MB/s fsyncs: 0.00/s response time: 60.156ms (95%)
+[  20s] reads: 0.00 MB/s writes: 4.77 MB/s fsyncs: 0.00/s response time: 60.210ms (95%)
+[  22s] reads: 0.00 MB/s writes: 4.58 MB/s fsyncs: 0.00/s response time: 60.463ms (95%)
+[  24s] reads: 0.00 MB/s writes: 4.65 MB/s fsyncs: 0.00/s response time: 60.264ms (95%)
+
+16 threads
+
+[   2s] reads: 0.00 MB/s writes: 17.35 MB/s fsyncs: 0.00/s response time: 7.764ms (95%)
+[   4s] reads: 0.00 MB/s writes: 5.17 MB/s fsyncs: 0.00/s response time: 62.655ms (95%)
+[   6s] reads: 0.00 MB/s writes: 5.15 MB/s fsyncs: 0.00/s response time: 62.749ms (95%)
+[   8s] reads: 0.00 MB/s writes: 4.89 MB/s fsyncs: 0.00/s response time: 63.258ms (95%)
+[  10s] reads: 0.00 MB/s writes: 4.98 MB/s fsyncs: 0.00/s response time: 62.862ms (95%)
+[  12s] reads: 0.00 MB/s writes: 5.26 MB/s fsyncs: 0.00/s response time: 63.032ms (95%)
+[  14s] reads: 0.00 MB/s writes: 5.27 MB/s fsyncs: 0.00/s response time: 62.599ms (95%)
+[  16s] reads: 0.00 MB/s writes: 4.80 MB/s fsyncs: 0.00/s response time: 63.088ms (95%)
+[  18s] reads: 0.00 MB/s writes: 4.84 MB/s fsyncs: 0.00/s response time: 63.239ms (95%)
+[  20s] reads: 0.00 MB/s writes: 5.24 MB/s fsyncs: 0.00/s response time: 62.712ms (95%)
+[  22s] reads: 0.00 MB/s writes: 4.25 MB/s fsyncs: 0.00/s response time: 63.619ms (95%)
+[  24s] reads: 0.00 MB/s writes: 4.90 MB/s fsyncs: 0.00/s response time: 63.202ms (95%)
